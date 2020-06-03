@@ -1,0 +1,35 @@
+{{#if success_msg}}
+<div class="row">
+    <div class="container">
+        <div class="col m6 offset-m3 s12 teal white-text">
+            <h5 class="center">{{success_msg}}</h5>
+        </div>
+    </div>
+</div>
+{{else}}
+
+{{/if}}
+
+{{#if error_msg}}
+<div class="row">
+    <div class="container">
+        <div class="col m6 offset-m3 s12 red lighten-2 white-text">
+            <h5 class="center">{{error_msg}}</h5>
+        </div>
+    </div>
+</div>
+{{else}}
+
+{{/if}}
+
+{{#if error}}
+<div class="row">
+    <div class="container">
+        <div class="col m6 offset-m3 s12 red lighten-2">
+            <h5 class="center">{{error}}</h5>
+        </div>
+    </div>
+</div>
+{{else}}
+
+{{/if}}

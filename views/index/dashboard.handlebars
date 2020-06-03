@@ -1,0 +1,33 @@
+<div class="border">
+    <div class="container">
+        {{#if story}}
+        <table class=" striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            {{#each story}}
+            <tbody>
+                <tr>
+
+                    <td><a href="/show/{{this._id}}" style="color: black">{{truncate (truncate this.title 20)}}</a>
+                    </td>
+                    <td>{{truncate (truncate this.content 30)}}</td>
+                    <td>{{formateDate this.date "MMMM do YYYY"}}</td>
+                    <td><a href="/edit/{{this._id}}" class="btn teal white-text"
+                            style="margin-left: 2px">Edit&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="/delete/{{this._id}}"
+                            class="btn orange darken-4 white-text" style="margin-left: 2px">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+        {{else}}
+        <h4>You Have Not Created Any Post/Story</h4>
+        {{/if}}
+    </div>
+</div>
