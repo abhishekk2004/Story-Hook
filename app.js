@@ -16,10 +16,13 @@ const { truncate, formateDate } = require("./auth/auth");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/storyDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://admin-abhishek:abhishek@cluster0-voopf.mongodb.net/storyDB",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 // Load Passport
 
